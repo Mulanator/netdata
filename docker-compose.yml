@@ -28,8 +28,8 @@ services:
       - traefik.docker.network=${DOCKER_NETWORK_NAME}
       - traefik.http.services.netdata.loadbalancer.server.port=19999
       - traefik.http.services.netdata.loadbalancer.server.scheme=http
-      - traefik.http.routers.netdata.rule=Host(`netdata.reisslein-analytik.de`)
-      - traefik.http.routers.netdata.entrypoints=http
+        #- traefik.http.routers.netdata.rule=Host(`netdata.reisslein-analytik.de`)
+        #- traefik.http.routers.netdata.entrypoints=http
         #- traefik.http.routers.netdata.middlewares=redirect@file
       - traefik.http.routers.netdata-https.rule=Host(`netdata.reisslein-analytik.de`)
       - traefik.http.routers.netdata-https.entrypoints=https
